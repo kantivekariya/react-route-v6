@@ -1,55 +1,62 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "parserOptions": {
-        "project": ["./tsconfig.json"]
-      }
-    }
-  ],
-  "plugins": ["@typescript-eslint", "react-hooks", "html", "prettier"],
-  "extends": [
-    "airbnb",
-    "airbnb-typescript",
-    "airbnb/hooks",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
-  ],
-  "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/prop-types": "off",
-    "react/jsx-props-no-spreading": "off",
-    "jsx-a11y/control-has-associated-label": "off",
-    "jsx-a11y/label-has-associated-control": "off",
-    "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-static-element-interactions": "off",
-    "jsx-a11y/no-noninteractive-element-interactions": "off",
-    "import/prefer-default-export": "off",
-    "no-underscore-dangle": "off",
-    "jsx-a11y/alt-text": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/forbid-prop-types": "off",
-    "react/jsx-filename-extension": [
-      1,
+   "parser": "@typescript-eslint/parser",
+   "overrides": [
       {
-        "extensions": [".ts", ".tsx"]
+         "files": ["*.ts", "*.tsx"],
+         "parserOptions": {
+            "project": ["./tsconfig.json"]
+         }
       }
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 100
+   ],
+   "plugins": ["@typescript-eslint", "react-hooks", "html", "prettier"],
+   "extends": [
+      "airbnb",
+      "airbnb-typescript",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking"
+   ],
+   "rules": {
+      "import/no-unresolved": "off",
+      "no-console": [
+         "error",
+         {
+            "allow": ["log", "warn", "error"]
+         }
+      ],
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/prop-types": "off",
+      "react/jsx-props-no-spreading": "off",
+      "jsx-a11y/control-has-associated-label": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "jsx-a11y/no-static-element-interactions": "off",
+      "jsx-a11y/no-noninteractive-element-interactions": "off",
+      "import/prefer-default-export": "off",
+      "no-underscore-dangle": "off",
+      "jsx-a11y/alt-text": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/forbid-prop-types": "off",
+      "react/jsx-filename-extension": [
+         1,
+         {
+            "extensions": [".ts", ".tsx"]
+         }
+      ],
+      "prettier/prettier": [
+         "error",
+         {
+            "trailingComma": "es5",
+            "singleQuote": true,
+            "printWidth": 100
+         }
+      ]
+   },
+   "settings": {
+      "react": {
+         "pragma": "React",
+         "version": "detect"
       }
-    ]
-  },
-  "settings": {
-    "react": {
-      "pragma": "React",
-      "version": "detect"
-    }
-  }
+   }
 }
