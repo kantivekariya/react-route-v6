@@ -38,7 +38,7 @@
       }
     ],
     "prettier/prettier": [
-      "warn",
+      "error",
       {
         "trailingComma": "es5",
         "singleQuote": true,
