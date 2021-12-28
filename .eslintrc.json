@@ -44,10 +44,16 @@
             "extensions": [".ts", ".tsx"]
          }
       ],
-      "prettier/prettier": [
-         "error",
+      "react/function-component-definition": [
+         2,
          {
-            "trailingComma": "es5",
+            "namedComponents": "function-declaration"
+         }
+      ],
+      "prettier/prettier": [
+         "warn",
+         {
+            "trailingComma": "none",
             "singleQuote": true,
             "printWidth": 100
          }
