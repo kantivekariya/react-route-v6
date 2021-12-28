@@ -8,7 +8,7 @@
       }
     }
   ],
-  "plugins": ["@typescript-eslint", "react-hooks", "html"],
+  "plugins": ["@typescript-eslint", "react-hooks", "html", "prettier"],
   "extends": [
     "airbnb",
     "airbnb-typescript",
@@ -35,6 +35,14 @@
       1,
       {
         "extensions": [".ts", ".tsx"]
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 100
       }
     ]
   },
