@@ -44,7 +44,7 @@
     "webpack-dev-server": "^4.7.1"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "src/**/*.{ts,tsx}": [
       "prettier --write",
       "eslint --fix"
     ]
