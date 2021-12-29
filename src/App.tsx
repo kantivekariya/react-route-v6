@@ -5,7 +5,7 @@ import configureStore from './redux/store/configureStore';
 import MainRoutes from './routes';
 
 const store = configureStore();
-const App = () => (
+const App: React.FC = (): JSX.Element => (
   <Provider store={store}>
     <MainRoutes />
   </Provider>
