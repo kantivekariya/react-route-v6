@@ -1,7 +1,14 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 
-function App() {
-  return <h1>kanji Vekariya</h1>;
-}
+import configureStore from './redux/store/configureStore';
+import MainRoutes from './routes';
+
+const store = configureStore();
+const App = () => (
+  <Provider store={store}>
+    <MainRoutes />
+  </Provider>
+);
 
 export default App;
