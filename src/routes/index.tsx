@@ -7,13 +7,12 @@ import CourseDetails from '../components/CourseDetails';
 import Courses from '../components/Courses';
 import Dashboard from '../components/Dashboard';
 
-import Home from '../components/Home';
 import Learn from '../components/Learn';
 
 const MainRoutes: React.FC = (): JSX.Element => (
+  /* Routes using react route config */
   <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/myapps" element={<Navigate replace to="/learn" />} />
+    <Route path="/" element={<Navigate replace to="/learn" />} />
     <Route path="learn" element={<Learn />}>
       <Route path="courses" element={<Courses />}>
         <Route path=":courseId" element={<CourseDetails />} />
@@ -21,7 +20,8 @@ const MainRoutes: React.FC = (): JSX.Element => (
       <Route path="bundles" element={<Bundles />} />
     </Route>
 
-    {/* Not need to define entire path in new route */}
+    {/* Not need to define entire path in v6 new route */}
+
     {/* <Route path="learn" element={<Learn />} />
     <Route path="/learn/courses" element={<Courses />} />
     <Route path="/learn/courses/:courseId" element={<CourseDetails />} /> */}
@@ -29,6 +29,8 @@ const MainRoutes: React.FC = (): JSX.Element => (
     <Route path="/dashboard" element={<Dashboard />} />
   </Routes>
 );
+
+/* Routes using useRoutes hooks */
 
 // const MainRoutes: React.FC = (): JSX.Element => {
 //   const elementRoutes: any = useRoutes([

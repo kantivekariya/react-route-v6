@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const CourseDetails: React.FC = (): JSX.Element => {
+  /* useNavigate instead of useHistory */
   const navigate = useNavigate();
   const { courseId } = useParams();
   return (
