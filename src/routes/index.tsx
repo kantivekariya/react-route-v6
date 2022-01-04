@@ -30,7 +30,7 @@ const MainRoutes: React.FC = (): JSX.Element => (
   </Routes>
 );
 
-/* Routes using useRoutes hooks */
+/* Object Based routes using useRoutes hooks */
 
 // const MainRoutes: React.FC = (): JSX.Element => {
 //   const elementRoutes: any = useRoutes([
