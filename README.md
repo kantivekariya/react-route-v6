@@ -137,6 +137,70 @@ const MainRoutes: React.FC = (): JSX.Element => {
 export default MainRoutes;
 
 ```
+### Use navigate `useNavigate` instead of history `useHistory`
 
+```js
+// This is a React Router v5 app
+import { useHistory } from 'react-router-dom';
+function App() {
+  let history = useHistory();
+  function handleClick() {
+    history.push('/home')
+  }
+  return (
+    <div>
+      <button onClick={handleClick}>go home</button>
+    </div>
+  );
+}
+
+// This is a React Router v6 app
+import { useNavigate } from 'react-router-dom';
+function App() {
+  let navigate = useNavigate();
+  function handleClick() {
+    navigate('/home')
+  }
+  return (
+    <div>
+      <button onClick={handleClick}>go home</button>
+    </div>
+  );
+}
+```
+
+### NavLink activeClassName prop does not exists anymore
+
+```tsx
+import { NavLink, Outlet } from 'react-router-dom';
+
+const Courses: React.FC = (): JSX.Element => {
+  const courseList = ['React', 'Angular', 'Vue', 'Nodejs'];
+  const randomCourseName = courseList[Math.floor(Math.random() * courseList.length)];
+  return (
+    <div>
+      <h1>Courses list</h1>
+      <h4>Courses card</h4>
+
+      <p>More test</p>
+      <NavLink
+        style={({ isActive }) => ({
+          backgroundColor: isActive ? 'pink' : 'yellow',
+        })}
+        to={`/learn/courses/${randomCourseName}`}
+      >
+        {randomCourseName}
+      </NavLink>
+      <NavLink className="btn btn-light" to="/learn/courses/tests">
+        tests
+      </NavLink>
+
+      <Outlet />
+    </div>
+  );
+};
+
+export default Courses;
+```
 
 
