@@ -75,8 +75,6 @@ export default Learn;
 The `useRoutes` hook is a first-class API for routing that lets you declare and compose your routes using JavaScript objects instead of React elements. Continuing with the example above, let's see what it looks like with `useRoutes`.
 
 ```tsx
-`App.tsx`
-
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -95,7 +93,6 @@ const App: React.FC = (): JSX.Element => (
 
 export default App;
 
-`MainRoutes`
 
 import { Routes, Route, Navigate, useRoutes } from 'react-router-dom';
 
