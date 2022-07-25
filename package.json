@@ -2,16 +2,21 @@
   "name": "react-starter-app",
   "version": "0.0.1",
   "scripts": {
-    "start": "webpack serve --open",
-    "build": "webpack --mode production"
+    "start": "react-scripts start",
+    "build": "CI= react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.1",
     "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
@@ -24,8 +29,7 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "@types/react-router": "^5.1.17",
-    "@types/webpack": "^5.28.0",
-    "@types/webpack-dev-server": "^4.5.0",
+    "@types/redux-logger": "^3.0.9",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "babel-loader": "^8.2.3",
@@ -59,5 +63,17 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

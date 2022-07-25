@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react';
-import { Routes, Route, Navigate, useRoutes } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Bundles from '../components/Bundles';
 import CourseDetails from '../components/CourseDetails';
 import Courses from '../components/Courses';
